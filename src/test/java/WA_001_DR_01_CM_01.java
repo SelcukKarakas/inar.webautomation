@@ -7,7 +7,7 @@ public class WA_001_DR_01_CM_01 extends Hooks {
 
 	@Test
 	public void testMovementsOfDraggableElements() {
-		// Navigate to webpage
+		// Navigate to the WebPage
 		// Click on "Webautomation" Link
 		pages.getHomePage().clickOnWebautomationLink();
 

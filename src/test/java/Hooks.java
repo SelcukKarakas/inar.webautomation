@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Driver;
@@ -10,11 +12,6 @@ import java.time.Duration;
 public class Hooks {
 
 	Pages pages = new Pages();
-
-	WebDriver driver = Driver.getDriver();
-
-	WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
-
 	@BeforeAll
 	public static void setUpTestEnvironment() {
 		Driver.getDriver();
