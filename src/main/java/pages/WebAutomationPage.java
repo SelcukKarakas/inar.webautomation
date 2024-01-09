@@ -6,14 +6,23 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class WebAutomationPage extends BasePage {
 
+	@FindBy(linkText = "Accent Folding")
+	private WebElement accentFoldingTab;
+
 	@FindBy(linkText = "Accept")
 	private WebElement acceptTab;
 
 	@FindBy(linkText = "Alerts")
 	private WebElement alertsTab;
 
+	@FindBy(linkText = "Autocomplete")
+	private WebElement autoComplateTag;
+
 	@FindBy(linkText = "Constrain Movement")
 	private WebElement constrainMovementTab;
+
+	@FindBy(linkText = "Control Group")
+	private WebElement controlGroupTab;
 
 	@FindBy(linkText = "Draggable")
 	private WebElement draggableTab;
@@ -47,6 +56,9 @@ public class WebAutomationPage extends BasePage {
 
 	@FindBy(linkText = "Textarea")
 	private WebElement textAreaLink;
+
+	@FindBy(linkText = "Toolbar")
+	private WebElement toolbarTab;
 
 	public WebAutomationPage() {
 		super();
@@ -106,6 +118,22 @@ public class WebAutomationPage extends BasePage {
 
 	public void clickOnTextAreaLink() {
 		textAreaLink.click();
+	}
+
+	public void clickOnAutoComplatePage() {
+		autoComplateTag.click();
+	}
+
+	public void clickOnAccentFoldingPage() {
+		accentFoldingTab.click();
+	}
+
+	public void clickOnControlGroupPage() {
+		controlGroupTab.click();
+	}
+
+	public void clickOnToolbarPage() {
+		toolbarTab.click();
 	}
 
 }

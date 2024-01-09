@@ -75,6 +75,9 @@
                         <include>**/*WA_007_RES_02_TA_01.java</include>
                         <include>**/*WA_008_AL_01_ALT_01.java</include>
                         <include>**/*WA_009_IF_01_NIF_01.java</include>
+                        <include>**/*WA_010_AUC_01_AF_01.java</include>
+                        <include>**/*WA_011_CG_01_TB_01.java</include>
+
                     </includes>
 
                 </configuration>

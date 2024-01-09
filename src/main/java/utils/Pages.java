@@ -2,6 +2,8 @@ package utils;
 
 import pages.*;
 import pages.alerts.AlertTypesPage;
+import pages.autocomplate.AccentFoldingPage;
+import pages.controlgroup.ToolbarPage;
 import pages.draggable.AutoScrollingTab;
 import pages.draggable.ConstrainMovementPage;
 import pages.draggable.DefaultFunctionalityTab;
@@ -65,6 +67,14 @@ public class Pages {
 
 	public TextAreaPage getTextAreaPage() {
 		return new TextAreaPage();
+	}
+
+	public AccentFoldingPage getAccentFoldingPage() {
+		return new AccentFoldingPage();
+	}
+
+	public ToolbarPage getToolbarPage() {
+		return new ToolbarPage();
 	}
 
 }

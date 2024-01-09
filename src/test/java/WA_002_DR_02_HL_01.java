@@ -25,7 +25,7 @@ public class WA_002_DR_02_HL_01 extends Hooks {
 		int initialXOfSecondDraggableElement = pages.getHandlessPage().locationXOfSecondDraggableElement();
 		int initialYOfSecondDraggableElement = pages.getHandlessPage().locationYOfSecondDraggableElement();
 
-		pages.getHandlessPage().dragAndDropSecondDraggableElement(2,30, 30);
+		pages.getHandlessPage().dragAndDropSecondDraggableElement(2, 30, 30);
 
 		int finalXOfSecondDraggableElement = pages.getHandlessPage().locationXOfSecondDraggableElement();
 		int finalYOfSecondDraggableElement = pages.getHandlessPage().locationYOfSecondDraggableElement();

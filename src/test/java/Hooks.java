@@ -12,6 +12,7 @@ import java.time.Duration;
 public class Hooks {
 
 	Pages pages = new Pages();
+
 	@BeforeAll
 	public static void setUpTestEnvironment() {
 		Driver.getDriver();
