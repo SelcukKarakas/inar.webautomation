@@ -19,11 +19,14 @@ public class Driver {
 	}
 
 	public static WebDriver getDriver() {
+		return getDriver(System.getProperty("browser", "chrome"));
+	}
+
+	public static WebDriver getDriver(String browserType) {
 		WebDriver driver;
 		if (DRIVER_THREAD_LOCAL.get() == null) {
-			String browser = System.getProperty("browserType", "chrome");
 
-			switch (browser.toLowerCase()) {
+			switch (browserType.toLowerCase()) {
 				case "firefox" -> {
 					FirefoxOptions firefoxOptions = new FirefoxOptions();
 					firefoxOptions.addArguments("--width-1920");

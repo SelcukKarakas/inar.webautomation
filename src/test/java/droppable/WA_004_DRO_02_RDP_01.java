@@ -1,8 +1,10 @@
-import org.junit.jupiter.api.Test;
-import utils.BrowserUtils;
+package droppable;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import base_test.Hooks;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import utils.BrowserUtils;
 
 public class WA_004_DRO_02_RDP_01 extends Hooks {
 
@@ -22,8 +24,8 @@ public class WA_004_DRO_02_RDP_01 extends Hooks {
 		int finallX = pages.getRevertDraggablePositionPage().getXLocationOfFirstRevertedDraggable();
 		int finalY = pages.getRevertDraggablePositionPage().getYLocationOfFirstRevertedDraggable();
 
-		assertEquals(initialX, finallX);
-		assertEquals(initialY, finalY);
+		Assert.assertEquals(initialX, finallX);
+		Assert.assertEquals(initialY, finalY);
 
 		int initialX2 = pages.getRevertDraggablePositionPage().getXLocationOfSecondRevertedDraggable();
 		int initialY2 = pages.getRevertDraggablePositionPage().getYLocationOfSecondRevertedDraggable();
@@ -35,8 +37,8 @@ public class WA_004_DRO_02_RDP_01 extends Hooks {
 		int finallX2 = pages.getRevertDraggablePositionPage().getXLocationOfSecondRevertedDraggable();
 		int finalY2 = pages.getRevertDraggablePositionPage().getYLocationOfSecondRevertedDraggable();
 
-		assertTrue(initialX2 < finallX2);
-		assertTrue(initialY2 < finalY2);
+		Assert.assertTrue(initialX2 < finallX2);
+		Assert.assertTrue(initialY2 < finalY2);
 	}
 
 }

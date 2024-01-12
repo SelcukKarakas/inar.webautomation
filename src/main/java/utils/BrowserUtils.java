@@ -7,15 +7,15 @@ import org.openqa.selenium.interactions.Actions;
 public class BrowserUtils {
 
 	public static void pageDown() {
-		WebDriver driver = Driver.getDriver();
 		Actions actions = new Actions(Driver.getDriver());
 		actions.keyDown(Keys.PAGE_DOWN).keyUp(Keys.PAGE_DOWN).build().perform();
+		wait(1);
 	}
 
 	public static void pageUp() {
-		WebDriver driver = Driver.getDriver();
 		Actions actions = new Actions(Driver.getDriver());
 		actions.keyDown(Keys.PAGE_UP).keyUp(Keys.PAGE_UP).perform();
+		wait(1);
 	}
 
 	public static void wait(double seconds) {

@@ -1,7 +1,8 @@
-import org.junit.jupiter.api.Test;
+package draggable;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import base_test.Hooks;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class WA_001_DR_01_CM_01 extends Hooks {
 
@@ -29,8 +30,8 @@ public class WA_001_DR_01_CM_01 extends Hooks {
 		int finalYOfFirstElement = pages.getConstrainMovementPage().getYLocationOfDraggableElement(1);
 
 		// Verify the first draggable element moves just vertically
-		assertEquals(initialXOfFirstElement, finalXOfFirstElement);
-		assertTrue(initialYOfFirstElement < finalYOfFirstElement);
+		Assert.assertEquals(initialXOfFirstElement, finalXOfFirstElement);
+		Assert.assertTrue(initialYOfFirstElement < finalYOfFirstElement);
 
 		// Initial X and Y location of second draggable element
 		int initialXOfSecondElement = pages.getConstrainMovementPage().getXLocationOfDraggableElement(2);
@@ -44,8 +45,8 @@ public class WA_001_DR_01_CM_01 extends Hooks {
 		int finalYOfSecondElement = pages.getConstrainMovementPage().getYLocationOfDraggableElement(2);
 
 		// Verify the second draggable element moves just horizontally
-		assertEquals(initialYOfSecondElement, finalYOfSecondElement);
-		assertTrue(initialXOfSecondElement < finalXOfSecondElement);
+		Assert.assertEquals(initialYOfSecondElement, finalYOfSecondElement);
+		Assert.assertTrue(initialXOfSecondElement < finalXOfSecondElement);
 
 		int initialXOfThirdElement = pages.getConstrainMovementPage().getXLocationOfDraggableElement(3);
 		int initialYOfThirdElement = pages.getConstrainMovementPage().getYLocationOfDraggableElement(3);
@@ -55,8 +56,8 @@ public class WA_001_DR_01_CM_01 extends Hooks {
 		int finalXOfThirdElement = pages.getConstrainMovementPage().getXLocationOfDraggableElement(3);
 		int finalYOfThirddElement = pages.getConstrainMovementPage().getYLocationOfDraggableElement(3);
 
-		assertTrue(initialYOfSecondElement - 100 < finalYOfSecondElement);
-		assertTrue(initialXOfSecondElement - 100 < finalXOfSecondElement);
+		Assert.assertTrue(initialYOfSecondElement - 100 < finalYOfSecondElement);
+		Assert.assertTrue(initialXOfSecondElement - 100 < finalXOfSecondElement);
 
 		int initialXOfFourthElement = pages.getConstrainMovementPage().getXLocationOfDraggableElement(4);
 		int initialYOfFourthElement = pages.getConstrainMovementPage().getYLocationOfDraggableElement(4);
@@ -66,8 +67,8 @@ public class WA_001_DR_01_CM_01 extends Hooks {
 		int finalXOfFourthElement = pages.getConstrainMovementPage().getXLocationOfDraggableElement(4);
 		int finalYOfFourthdElement = pages.getConstrainMovementPage().getYLocationOfDraggableElement(4);
 
-		assertTrue(initialYOfSecondElement - 100 < finalYOfSecondElement);
-		assertTrue(initialXOfSecondElement - 100 < finalXOfSecondElement);
+		Assert.assertTrue(initialYOfSecondElement - 100 < finalYOfSecondElement);
+		Assert.assertTrue(initialXOfSecondElement - 100 < finalXOfSecondElement);
 
 	}
 

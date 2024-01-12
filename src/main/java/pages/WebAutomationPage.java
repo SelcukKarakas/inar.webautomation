@@ -24,6 +24,12 @@ public class WebAutomationPage extends BasePage {
 	@FindBy(linkText = "Control Group")
 	private WebElement controlGroupTab;
 
+	@FindBy(linkText = "Dialog")
+	private WebElement dialogTab;
+
+	@FindBy(linkText = "Download Dialog")
+	private WebElement downloadDiologTab;
+
 	@FindBy(linkText = "Draggable")
 	private WebElement draggableTab;
 
@@ -36,8 +42,14 @@ public class WebAutomationPage extends BasePage {
 	@FindBy(linkText = "Iframe")
 	private WebElement iframeTab;
 
+	@FindBy(linkText = "Modal Form")
+	private WebElement modalFormTab;
+
 	@FindBy(linkText = "Normal Iframe")
 	private WebElement normalIframeTab;
+
+	@FindBy(linkText = "Progress Bar")
+	private WebElement progressBarTab;
 
 	@FindBy(linkText = "Resizable")
 	private WebElement resizableTab;
@@ -134,6 +146,22 @@ public class WebAutomationPage extends BasePage {
 
 	public void clickOnToolbarPage() {
 		toolbarTab.click();
+	}
+
+	public void clickOnModalTabPage() {
+		modalFormTab.click();
+	}
+
+	public void clickOnDialogPage() {
+		dialogTab.click();
+	}
+
+	public void clickOnProgressBarPage() {
+		progressBarTab.click();
+	}
+
+	public void clickOnDownloadDiologPage() {
+		downloadDiologTab.click();
 	}
 
 }

@@ -1,6 +1,9 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.openqa.selenium.JavascriptExecutor;
+package iframe;
+
+import base_test.Hooks;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import utils.BrowserUtils;
 
 public class WA_009_IF_01_NIF_01 extends Hooks {
@@ -16,7 +19,7 @@ public class WA_009_IF_01_NIF_01 extends Hooks {
 		BrowserUtils.wait(1);
 		pages.getWebAutomationPage().clickOnNormalIframeLink();
 
-		Assertions.assertEquals("Inar academy", pages.getNormalIframePage().getTitleOnFrame());
+		Assert.assertEquals("Inar academy", pages.getNormalIframePage().getTitleOnFrame());
 	}
 
 }

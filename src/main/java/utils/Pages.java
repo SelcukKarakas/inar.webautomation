@@ -4,6 +4,7 @@ import pages.*;
 import pages.alerts.AlertTypesPage;
 import pages.autocomplate.AccentFoldingPage;
 import pages.controlgroup.ToolbarPage;
+import pages.dialog.ModalFormPage;
 import pages.draggable.AutoScrollingTab;
 import pages.draggable.ConstrainMovementPage;
 import pages.draggable.DefaultFunctionalityTab;
@@ -11,6 +12,7 @@ import pages.draggable.Handless;
 import pages.droppable.AcceptPage;
 import pages.droppable.RevertDraggablePositionPage;
 import pages.iframe.NormalIframePage;
+import pages.progressbar.DownloadDialogPage;
 import pages.resizeable.SynchronusResizePage;
 import pages.resizeable.TextAreaPage;
 import pages.selectable.SerializePage;
@@ -75,6 +77,14 @@ public class Pages {
 
 	public ToolbarPage getToolbarPage() {
 		return new ToolbarPage();
+	}
+
+	public ModalFormPage getModalFormPage() {
+		return new ModalFormPage();
+	}
+
+	public DownloadDialogPage getDownloadDialogPage() {
+		return new DownloadDialogPage();
 	}
 
 }

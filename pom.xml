@@ -18,13 +18,8 @@
         <browser>chrome</browser>
     </properties>
 
+
     <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -33,17 +28,11 @@
         </dependency>
 
 
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-            <version>${junit.version}</version>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.9.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -65,21 +54,14 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.3</version>
                 <configuration>
-                    <includes>
-                        <include>**/*WA_001_DR_01_CM_01.java</include>
-                        <include>**/*WA_002_DR_02_HL_01.java</include>
-                        <include>**/*WA_003_DRO_01_AC_01.java</include>
-                        <include>**/*WA_004_DRO_02_RDP_01.java</include>
-                        <include>**/*WA_005_SE_01_SER_01.java</include>
-                        <include>**/*WA_006_RES_01_SR_01.java</include>
-                        <include>**/*WA_007_RES_02_TA_01.java</include>
-                        <include>**/*WA_008_AL_01_ALT_01.java</include>
-                        <include>**/*WA_009_IF_01_NIF_01.java</include>
-                        <include>**/*WA_010_AUC_01_AF_01.java</include>
-                        <include>**/*WA_011_CG_01_TB_01.java</include>
-
-                    </includes>
-
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/main/resources/draggable.xml</suiteXmlFile>
+                        <suiteXmlFile>src/main/resources/droppable.xml</suiteXmlFile>
+                        <suiteXmlFile>src/main/resources/selectable.xml</suiteXmlFile>
+                        <suiteXmlFile>src/main/resources/resizable.xml</suiteXmlFile>
+                        <suiteXmlFile>src/main/resources/alerts.xml</suiteXmlFile>
+                        <suiteXmlFile>src/main/resources/iframe.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
 

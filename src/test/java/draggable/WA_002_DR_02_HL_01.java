@@ -1,7 +1,8 @@
-import org.junit.jupiter.api.Test;
-import utils.BrowserUtils;
+package draggable;
 
-import static org.junit.jupiter.api.Assertions.*;
+import base_test.Hooks;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class WA_002_DR_02_HL_01 extends Hooks {
 
@@ -19,8 +20,8 @@ public class WA_002_DR_02_HL_01 extends Hooks {
 		int finalXOfFirstDraggableElement = pages.getHandlessPage().locationXOfFirstDraggableElement();
 		int finalYOfFirstDraggableElement = pages.getHandlessPage().locationYOfFirstDraggableElement();
 
-		assertTrue(finalXOfFirstDraggableElement > initialXOfFirstDraggableElement);
-		assertTrue(finalYOfFirstDraggableElement > initialYOfFirstDraggableElement);
+		Assert.assertTrue(finalXOfFirstDraggableElement > initialXOfFirstDraggableElement);
+		Assert.assertTrue(finalYOfFirstDraggableElement > initialYOfFirstDraggableElement);
 
 		int initialXOfSecondDraggableElement = pages.getHandlessPage().locationXOfSecondDraggableElement();
 		int initialYOfSecondDraggableElement = pages.getHandlessPage().locationYOfSecondDraggableElement();
@@ -30,15 +31,15 @@ public class WA_002_DR_02_HL_01 extends Hooks {
 		int finalXOfSecondDraggableElement = pages.getHandlessPage().locationXOfSecondDraggableElement();
 		int finalYOfSecondDraggableElement = pages.getHandlessPage().locationYOfSecondDraggableElement();
 
-		assertEquals(finalXOfSecondDraggableElement, initialXOfSecondDraggableElement);
-		assertEquals(finalYOfSecondDraggableElement, initialYOfSecondDraggableElement);
+		Assert.assertEquals(finalXOfSecondDraggableElement, initialXOfSecondDraggableElement);
+		Assert.assertEquals(finalYOfSecondDraggableElement, initialYOfSecondDraggableElement);
 
 		pages.getHandlessPage().dragAndDropSecondDraggableElement(1, 50, 50);
 		finalXOfSecondDraggableElement = pages.getHandlessPage().locationXOfSecondDraggableElement();
 		finalYOfSecondDraggableElement = pages.getHandlessPage().locationYOfSecondDraggableElement();
 
-		assertNotEquals(initialXOfSecondDraggableElement, finalXOfSecondDraggableElement);
-		assertNotEquals(initialYOfSecondDraggableElement, finalYOfSecondDraggableElement);
+		Assert.assertNotEquals(initialXOfSecondDraggableElement, finalXOfSecondDraggableElement);
+		Assert.assertNotEquals(initialYOfSecondDraggableElement, finalYOfSecondDraggableElement);
 
 	}
 

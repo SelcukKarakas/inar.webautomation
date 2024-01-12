@@ -1,6 +1,9 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.openqa.selenium.JavascriptExecutor;
+package alerts;
+
+import base_test.Hooks;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import utils.BrowserUtils;
 
 public class WA_008_AL_01_ALT_01 extends Hooks {
@@ -9,11 +12,9 @@ public class WA_008_AL_01_ALT_01 extends Hooks {
 	public void testAlertsTypePage() {
 		pages.getHomePage().clickOnWebautomationLink();
 		BrowserUtils.pageDown();
-		BrowserUtils.wait(1);
 		pages.getWebAutomationPage().clickOnAlertLink();
 
 		BrowserUtils.pageUp();
-		BrowserUtils.wait(1);
 		pages.getAlertsTypePage().clickOnShowConfirmButton();
 
 		pages.getAlertsTypePage().confirmTheAlert();
@@ -21,7 +22,7 @@ public class WA_008_AL_01_ALT_01 extends Hooks {
 
 		pages.getAlertsTypePage().confirmTheAlert();
 
-		Assertions.assertEquals("Confirmed!", actualText);
+		Assert.assertEquals("Confirmed!", actualText);
 
 		pages.getAlertsTypePage().clickOnShowPromptButton();
 		pages.getAlertsTypePage().sendTextToAlert("Emir Uyanık");
@@ -31,7 +32,7 @@ public class WA_008_AL_01_ALT_01 extends Hooks {
 
 		pages.getAlertsTypePage().confirmTheAlert();
 
-		Assertions.assertEquals("Hello, Emir Uyanık!", actualText);
+		Assert.assertEquals("Hello, Emir Uyanık!", actualText);
 	}
 
 }

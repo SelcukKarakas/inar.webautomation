@@ -1,6 +1,9 @@
-import org.junit.jupiter.api.Test;
+package resizable;
+
+import base_test.Hooks;
 import org.openqa.selenium.Dimension;
-import static org.junit.jupiter.api.Assertions.*;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class WA_006_RES_01_SR_01 extends Hooks {
 
@@ -18,16 +21,16 @@ public class WA_006_RES_01_SR_01 extends Hooks {
 		Dimension finalDimOfFirstElement = pages.getsynchronusResizePage().getSizeOfFirstResizeableElement();
 		Dimension finalDimOfSecondElement = pages.getsynchronusResizePage().getSizeOfSecondResizeableElement();
 
-		assertNotEquals(initialDimOfFirstElement, finalDimOfFirstElement);
-		assertNotEquals(initialDimOfSecondElement, finalDimOfSecondElement);
+		Assert.assertNotEquals(initialDimOfFirstElement, finalDimOfFirstElement);
+		Assert.assertNotEquals(initialDimOfSecondElement, finalDimOfSecondElement);
 
 		pages.getsynchronusResizePage().resizeSecondResizeableElement(-50, -50);
 
 		Dimension final2DimOfFirstElement = pages.getsynchronusResizePage().getSizeOfFirstResizeableElement();
 		Dimension final2DimOfSecondElement = pages.getsynchronusResizePage().getSizeOfSecondResizeableElement();
 
-		assertEquals(final2DimOfFirstElement, finalDimOfFirstElement);
-		assertNotEquals(final2DimOfSecondElement, finalDimOfSecondElement);
+		Assert.assertEquals(final2DimOfFirstElement, finalDimOfFirstElement);
+		Assert.assertNotEquals(final2DimOfSecondElement, finalDimOfSecondElement);
 
 	}
 

@@ -1,5 +1,8 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+package auto_complete;
+
+import base_test.Hooks;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import utils.BrowserUtils;
 
 import java.util.Arrays;
@@ -17,7 +20,7 @@ public class WA_010_AUC_01_AF_01 extends Hooks {
 
 		List<String> expectedList = Arrays.asList("Jörn Zaefferer", "John Resig");
 
-		Assertions.assertEquals(expectedList, pages.getAccentFoldingPage().getTexts());
+		Assert.assertEquals(expectedList, pages.getAccentFoldingPage().getTexts());
 
 		pages.getAccentFoldingPage().cleanTextBox();
 
@@ -29,7 +32,7 @@ public class WA_010_AUC_01_AF_01 extends Hooks {
 
 		expectedList = List.of("Jörn Zaefferer");
 
-		Assertions.assertEquals(expectedList, pages.getAccentFoldingPage().getTexts());
+		Assert.assertEquals(expectedList, pages.getAccentFoldingPage().getTexts());
 	}
 
 }

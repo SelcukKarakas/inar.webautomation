@@ -1,5 +1,8 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+package resizable;
+
+import base_test.Hooks;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class WA_007_RES_02_TA_01 extends Hooks {
 
@@ -17,8 +20,8 @@ public class WA_007_RES_02_TA_01 extends Hooks {
 		int finalWidthOfTextBox = pages.getTextAreaPage().widthOfTheTextBox();
 		int finalHeightOfTextBox = pages.getTextAreaPage().heigthOfTheTextBox();
 
-		Assertions.assertNotEquals(initWidthOfTextBox, finalWidthOfTextBox);
-		Assertions.assertNotEquals(initHeightOfTextBox, finalHeightOfTextBox);
+		Assert.assertNotEquals(initWidthOfTextBox, finalWidthOfTextBox);
+		Assert.assertNotEquals(initHeightOfTextBox, finalHeightOfTextBox);
 	}
 
 }

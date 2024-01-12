@@ -1,5 +1,8 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+package control_group;
+
+import base_test.Hooks;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class WA_011_CG_01_TB_01 extends Hooks {
 
@@ -18,7 +21,7 @@ public class WA_011_CG_01_TB_01 extends Hooks {
 
 		String finalStyle = pages.getToolbarPage().styleOfText();
 
-		Assertions.assertNotEquals(initialStyle, finalStyle);
+		Assert.assertNotEquals(initialStyle, finalStyle);
 	}
 
 }

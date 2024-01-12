@@ -1,6 +1,8 @@
-import org.junit.jupiter.api.Test;
+package droppable;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import base_test.Hooks;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class WA_003_DRO_01_AC_01 extends Hooks {
 
@@ -15,14 +17,14 @@ public class WA_003_DRO_01_AC_01 extends Hooks {
 		String expectedText1 = "accept: '#draggable'";
 		String actualText1 = pages.getAcceptPage().getTextOnTargetElement();
 
-		assertEquals(expectedText1, actualText1);
+		Assert.assertEquals(expectedText1, actualText1);
 
 		pages.getAcceptPage().dragAndDropDroppableElement();
 
 		String expectedText2 = "Dropped!";
 		String actualText2 = pages.getAcceptPage().getTextOnTargetElement();
 
-		assertEquals(expectedText2, actualText2);
+		Assert.assertEquals(expectedText2, actualText2);
 	}
 
 }
